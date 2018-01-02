@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Accelerometer.cs" />
     <Compile Include="AccelerometerReadings.cs" />
+    <Compile Include="Events\PairingEventArgs.cs" />
     <Compile Include="GaitReadings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionEventArgs.cs" />

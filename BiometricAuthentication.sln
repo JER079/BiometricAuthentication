@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiometricAuthentication.Bus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{49A5DA84-A88D-4E2C-898E-C2D8071DB5CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesterApplication", "TesterApplication\TesterApplication.csproj", "{A5A2FDF9-235C-4ABB-B458-BDB31763E5E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{49A5DA84-A88D-4E2C-898E-C2D8071DB5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49A5DA84-A88D-4E2C-898E-C2D8071DB5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49A5DA84-A88D-4E2C-898E-C2D8071DB5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A2FDF9-235C-4ABB-B458-BDB31763E5E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A2FDF9-235C-4ABB-B458-BDB31763E5E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A2FDF9-235C-4ABB-B458-BDB31763E5E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A2FDF9-235C-4ABB-B458-BDB31763E5E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

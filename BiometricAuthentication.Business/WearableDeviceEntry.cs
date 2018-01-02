@@ -1,12 +1,22 @@
 ﻿using Common;
+using System;
 
 namespace BiometricAuthentication.Business
 {
     public class WearableDeviceEntry
     {
+        public Guid DeviceId;
+        public string DeviceName;
+
         private GaitReadings _gaitReadings;
         private string _encryptionKey;
         private Session _session;
+
+        public WearableDeviceEntry(Guid deviceId, string deviceName)
+        {
+            DeviceId = deviceId;
+            DeviceName = deviceName;
+        }
 
         public bool IsDeviceMatched(GaitReadings readingsToMatch)
         {
@@ -20,7 +30,7 @@ namespace BiometricAuthentication.Business
 
         public Session CreateNewSessionForDevice()
         {
-            if (!_session.IsExpired) return _session;
+            if (_session != null && !_session.IsExpired) return _session;
 
             _session = new Session();
             return _session;
