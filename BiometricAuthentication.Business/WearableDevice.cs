@@ -10,18 +10,19 @@ namespace BiometricAuthentication.Business
         public delegate void SessionHandler(GaitReadings gaitReadings, SessionEventArgs sessionEventArgs);
 
         private readonly Accelerometer _accelerometer;
-
+        public readonly TransmitDataService DataTransmitter;
         private readonly Guid _deviceId;
         private readonly string _deviceName;
 
         public WearableDevice(Accelerometer accelerometer, 
-                              DeviceDiscoveryService deviceDiscoveryService)
+                              DeviceDiscoveryService deviceDiscoveryService,
+                              TransmitDataService transmitDataService)
         {
             _deviceId = Guid.NewGuid();
             _deviceName = "Jonathan's Watch";
 
             _accelerometer = accelerometer;
-
+            DataTransmitter = transmitDataService;
             deviceDiscoveryService.DiscoverDevices += DeviceDiscoveryService_DiscoverDevices;
         }
 
@@ -38,8 +39,11 @@ namespace BiometricAuthentication.Business
             sessionEventArgs.WearbleDeviceId = _deviceId;
             
             RaiseStartNewSession(gaitReadings, sessionEventArgs);
+        }
 
-
+        public void TransmitData(string dataToTransmit)
+        {
+            DataTransmitter.SendData(dataToTransmit, new GaitReadings(GetLatestReadings()), _deviceId);
         }
 
         public AccelerometerReadings GetLatestReadings()

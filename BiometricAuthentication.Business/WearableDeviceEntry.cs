@@ -28,7 +28,7 @@ namespace BiometricAuthentication.Business
             return _session.IsExpired;
         }
 
-        public Session CreateNewSessionForDevice()
+        public Session CreateNewSessionForDevice(GaitReadings gaitReadings)
         {
             if (_session != null && !_session.IsExpired) return _session;
 

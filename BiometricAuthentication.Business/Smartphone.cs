@@ -11,19 +11,29 @@ namespace BiometricAuthentication.Business
         private readonly Guid _smartphoneId;
         private readonly string _smartphoneName;
 
+        public string LastMessageReceived = string.Empty;
+
         public Smartphone(DeviceDiscoveryService deviceDiscoveryService)
         {
             _smartphoneId = Guid.NewGuid();
             _smartphoneName = "Jonathan's Phone";
 
             _wearableDeviceStore = new WearableDeviceStore();
-            this._deviceDiscoveryService = deviceDiscoveryService;
-        }
-   
+            _deviceDiscoveryService = deviceDiscoveryService;
+        } 
+
         public void SubscribeForEvents(WearableDevice wearableDevice)
         {
             wearableDevice.RaiseStartNewSession += WearableDevice_RaiseStartNewSession;
+            wearableDevice.DataTransmitter.TransmitData += DataTransmitter_TransmitData;
+        }
 
+        private void DataTransmitter_TransmitData(Common.Events.CommunicationEventArgs communicationEventArgs)
+        {
+            var deviceWithId = _wearableDeviceStore.Find(communicationEventArgs.GaitReadings);
+
+            if (deviceWithId == null) LastMessageReceived = "Device not found";
+            LastMessageReceived = communicationEventArgs.Data;      
         }
 
         private void WearableDevice_RaiseStartNewSession(GaitReadings gaitReadings, SessionEventArgs sessionEventArgs)
@@ -38,7 +48,7 @@ namespace BiometricAuthentication.Business
 
             if (deviceEntry != null)
             {
-                return deviceEntry.CreateNewSessionForDevice();
+                return deviceEntry.CreateNewSessionForDevice(gaitReadings);
             }
 
             //we do not know this device

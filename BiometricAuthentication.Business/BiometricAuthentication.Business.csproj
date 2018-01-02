@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeviceDircoveryService.cs" />
+    <Compile Include="TransmitDataService.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="Smartphone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

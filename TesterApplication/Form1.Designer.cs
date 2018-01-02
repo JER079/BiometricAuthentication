@@ -34,11 +34,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SmartphoneMessage = new System.Windows.Forms.Label();
             this.DeviceLabel = new System.Windows.Forms.Label();
+            this.TransmitTextBox = new System.Windows.Forms.TextBox();
+            this.TransmitDataButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StartNewSessionButton
             // 
-            this.StartNewSessionButton.Location = new System.Drawing.Point(370, 101);
+            this.StartNewSessionButton.Location = new System.Drawing.Point(398, 71);
             this.StartNewSessionButton.Name = "StartNewSessionButton";
             this.StartNewSessionButton.Size = new System.Drawing.Size(123, 23);
             this.StartNewSessionButton.TabIndex = 0;
@@ -68,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(392, 70);
+            this.label2.Location = new System.Drawing.Point(420, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 3;
@@ -86,17 +88,36 @@
             // DeviceLabel
             // 
             this.DeviceLabel.AutoSize = true;
-            this.DeviceLabel.Location = new System.Drawing.Point(409, 149);
+            this.DeviceLabel.Location = new System.Drawing.Point(437, 119);
             this.DeviceLabel.Name = "DeviceLabel";
             this.DeviceLabel.Size = new System.Drawing.Size(35, 13);
             this.DeviceLabel.TabIndex = 5;
             this.DeviceLabel.Text = "label3";
+            // 
+            // TransmitTextBox
+            // 
+            this.TransmitTextBox.Location = new System.Drawing.Point(398, 151);
+            this.TransmitTextBox.Name = "TransmitTextBox";
+            this.TransmitTextBox.Size = new System.Drawing.Size(100, 20);
+            this.TransmitTextBox.TabIndex = 6;
+            // 
+            // TransmitDataButton
+            // 
+            this.TransmitDataButton.Location = new System.Drawing.Point(412, 177);
+            this.TransmitDataButton.Name = "TransmitDataButton";
+            this.TransmitDataButton.Size = new System.Drawing.Size(75, 23);
+            this.TransmitDataButton.TabIndex = 7;
+            this.TransmitDataButton.Text = "Send Data";
+            this.TransmitDataButton.UseVisualStyleBackColor = true;
+            this.TransmitDataButton.Click += new System.EventHandler(this.TransmitDataButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 261);
+            this.Controls.Add(this.TransmitDataButton);
+            this.Controls.Add(this.TransmitTextBox);
             this.Controls.Add(this.DeviceLabel);
             this.Controls.Add(this.SmartphoneMessage);
             this.Controls.Add(this.label2);
@@ -118,6 +139,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label SmartphoneMessage;
         private System.Windows.Forms.Label DeviceLabel;
+        private System.Windows.Forms.TextBox TransmitTextBox;
+        private System.Windows.Forms.Button TransmitDataButton;
     }
 }
 
