@@ -5,3 +5,5 @@
 /.vs
 /BiometricAuthentication.Business/obj/Debug
 /BiometricAuthentication.Business/bin/Debug
+/Common/bin/Debug
+/Common/obj/Debug

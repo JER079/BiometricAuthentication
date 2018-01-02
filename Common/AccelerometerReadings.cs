@@ -1,4 +1,4 @@
-﻿namespace BiometricAuthentication.Business.WearableDevice
+﻿namespace Common
 {
     public class AccelerometerReadings
     {
