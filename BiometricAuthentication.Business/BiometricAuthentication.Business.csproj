@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DecryptionService.cs" />
     <Compile Include="DeviceDircoveryService.cs" />
+    <Compile Include="EncryptionKeyGenerator.cs" />
+    <Compile Include="EncryptionService.cs" />
     <Compile Include="TransmitDataService.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="Smartphone.cs" />

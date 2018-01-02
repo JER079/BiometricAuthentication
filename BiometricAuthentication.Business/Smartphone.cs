@@ -32,17 +32,31 @@ namespace BiometricAuthentication.Business
         {
             var deviceWithId = _wearableDeviceStore.Find(communicationEventArgs.GaitReadings);
 
-            if (deviceWithId == null) LastMessageReceived = "Device not found";
-            LastMessageReceived = communicationEventArgs.Data;      
+            if (deviceWithId == null)
+            {
+                LastMessageReceived = "Device not found";
+                return;
+            }
+            if (!deviceWithId.IsSessionActive())
+            {
+                LastMessageReceived = "Session not active";
+                return;
+            }
+            
+            var decriptionService = new DecryptionService();
+            var decryptedMesage = decriptionService.Decrypt(communicationEventArgs.Data, deviceWithId.GetEncryptionKey());
+
+            LastMessageReceived = decryptedMesage;      
         }
 
         private void WearableDevice_RaiseStartNewSession(GaitReadings gaitReadings, SessionEventArgs sessionEventArgs)
         {
-            var session = StartNewSession(gaitReadings);
-            sessionEventArgs.SessionId = session.SessionId;
+            var createSessionResult = StartNewSession(gaitReadings);
+            sessionEventArgs.SessionId = createSessionResult.Session.SessionId;
+            sessionEventArgs.EncryptionKey = createSessionResult.EncryptionKey;
         }
 
-        private Session StartNewSession(GaitReadings gaitReadings)
+        private SessionResult StartNewSession(GaitReadings gaitReadings)
         {
             var deviceEntry = _wearableDeviceStore.Find(gaitReadings);
 

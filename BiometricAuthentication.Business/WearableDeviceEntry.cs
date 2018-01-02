@@ -25,15 +25,40 @@ namespace BiometricAuthentication.Business
 
         public bool IsSessionActive()
         {
-            return _session.IsExpired;
+            return !_session.IsExpired;
         }
 
-        public Session CreateNewSessionForDevice(GaitReadings gaitReadings)
+        public SessionResult CreateNewSessionForDevice(GaitReadings gaitReadings)
         {
-            if (_session != null && !_session.IsExpired) return _session;
+            if (_session != null && !_session.IsExpired) return new SessionResult(_session, _encryptionKey);
 
             _session = new Session();
-            return _session;
-        }      
+            _gaitReadings = gaitReadings;
+
+            _encryptionKey = CreateNewEncryptionKey(gaitReadings);
+            return new SessionResult(_session, _encryptionKey);
+        }
+
+        private string CreateNewEncryptionKey(GaitReadings gaitReadings)
+        {
+            var keyGenerator = new EncryptionKeyGenerator();
+            return keyGenerator.CreateNewEncrytionKey();
+        }
+
+        public string GetEncryptionKey()
+        {
+            return _encryptionKey;
+        }
+    }
+
+    public class SessionResult
+    {
+        public SessionResult(Session session, string encryptionKey)
+        {
+            Session = session;
+            EncryptionKey = encryptionKey;
+        }
+        public Session Session { get; }
+        public string EncryptionKey { get; }
     }
 }

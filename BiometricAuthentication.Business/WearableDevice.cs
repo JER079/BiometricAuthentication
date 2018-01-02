@@ -39,6 +39,8 @@ namespace BiometricAuthentication.Business
             sessionEventArgs.WearbleDeviceId = _deviceId;
             
             RaiseStartNewSession(gaitReadings, sessionEventArgs);
+
+            DataTransmitter.SetEncryptionKey(sessionEventArgs.EncryptionKey);
         }
 
         public void TransmitData(string dataToTransmit)

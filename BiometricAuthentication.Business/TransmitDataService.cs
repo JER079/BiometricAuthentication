@@ -6,18 +6,32 @@ namespace BiometricAuthentication.Business
 {
     public class TransmitDataService
     {
+        private string _encryptionKey;
+
         public event TransmitDataHandler TransmitData;
         private CommunicationEventArgs _communicationEventArgs;
         public delegate void TransmitDataHandler(CommunicationEventArgs communicationEventArgs);
 
+        public void SetEncryptionKey(string encryptionKey)
+        {
+            _encryptionKey = encryptionKey;
+        }
+
         public void SendData(string dataToTransmit, GaitReadings gaitReadings, Guid deviceId)
         {
-            _communicationEventArgs = new CommunicationEventArgs();
-            _communicationEventArgs.Data = dataToTransmit;
-            _communicationEventArgs.GaitReadings = gaitReadings;
-            _communicationEventArgs.DeviceId = deviceId;
+            if (!string.IsNullOrEmpty(_encryptionKey))
+            {
+                var encryptionService = new EncryptionService();
+                var encryptedData = encryptionService.encrypt(dataToTransmit, _encryptionKey);
 
-            TransmitData(_communicationEventArgs);
+                _communicationEventArgs = new CommunicationEventArgs();
+                _communicationEventArgs.Data = encryptedData;
+                _communicationEventArgs.GaitReadings = gaitReadings;
+                _communicationEventArgs.DeviceId = deviceId;
+
+                TransmitData(_communicationEventArgs);
+            }
+            
         }
 
     }
