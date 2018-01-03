@@ -40,22 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DecryptionService.cs" />
+    <Compile Include="Encryption\DecryptionService.cs" />
     <Compile Include="DeviceDircoveryService.cs" />
     <Compile Include="EncryptionKeyGenerator.cs" />
-    <Compile Include="EncryptionService.cs" />
+    <Compile Include="Encryption\EncryptionService.cs" />
     <Compile Include="TransmitDataService.cs" />
-    <Compile Include="Session.cs" />
-    <Compile Include="Smartphone.cs" />
+    <Compile Include="Devices\Smartphone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WearableDevice.cs" />
+    <Compile Include="Devices\WearableDevice.cs" />
     <Compile Include="WearableDeviceEntry.cs" />
     <Compile Include="WearableDeviceStore.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
+    <ProjectReference Include="..\Common\BiometricAuthentication.Common.csproj">
       <Project>{49a5da84-a88d-4e2c-898e-c2d8071db5cf}</Project>
-      <Name>Common</Name>
+      <Name>BiometricAuthentication.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

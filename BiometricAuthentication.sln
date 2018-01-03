@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiometricAuthentication.Business", "BiometricAuthentication.Business\BiometricAuthentication.Business.csproj", "{B0506291-A7C6-4510-9902-2425E21FA612}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{49A5DA84-A88D-4E2C-898E-C2D8071DB5CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiometricAuthentication.Common", "Common\BiometricAuthentication.Common.csproj", "{49A5DA84-A88D-4E2C-898E-C2D8071DB5CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesterApplication", "TesterApplication\TesterApplication.csproj", "{A5A2FDF9-235C-4ABB-B458-BDB31763E5E9}"
 EndProject

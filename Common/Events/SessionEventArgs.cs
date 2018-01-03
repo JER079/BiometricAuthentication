@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common
+namespace BiometricAuthentication.Common.Events
 {
     public class SessionEventArgs : EventArgs
     {

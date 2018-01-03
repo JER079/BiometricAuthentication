@@ -1,5 +1,6 @@
 ﻿using BiometricAuthentication.Business;
-using Common;
+using BiometricAuthentication.Business.Devices;
+using BiometricAuthentication.Common;
 using System.Windows.Forms;
 
 namespace TesterApplication

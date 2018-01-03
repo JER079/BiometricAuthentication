@@ -1,6 +1,7 @@
-﻿using System;
+﻿using BiometricAuthentication.Common.Sensors;
+using System;
 
-namespace Common.Events
+namespace BiometricAuthentication.Common.Events
 {
     public class CommunicationEventArgs : EventArgs
     {

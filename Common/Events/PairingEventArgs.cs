@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common.Events
+namespace BiometricAuthentication.Common.Events
 {
     public class PairingEventArgs : EventArgs
     {

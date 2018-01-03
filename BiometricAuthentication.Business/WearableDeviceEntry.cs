@@ -1,4 +1,4 @@
-﻿using Common;
+﻿using BiometricAuthentication.Common.Sensors;
 using System;
 
 namespace BiometricAuthentication.Business

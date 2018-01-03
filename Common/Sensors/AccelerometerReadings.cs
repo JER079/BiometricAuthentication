@@ -1,4 +1,4 @@
-﻿namespace Common
+﻿namespace BiometricAuthentication.Common.Sensors
 {
     public class AccelerometerReadings
     {

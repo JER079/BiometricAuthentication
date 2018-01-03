@@ -1,7 +1,9 @@
-﻿using Common;
+﻿using BiometricAuthentication.Business.Encryption;
+using BiometricAuthentication.Common.Events;
+using BiometricAuthentication.Common.Sensors;
 using System;
 
-namespace BiometricAuthentication.Business
+namespace BiometricAuthentication.Business.Devices
 {
     public class Smartphone
     {

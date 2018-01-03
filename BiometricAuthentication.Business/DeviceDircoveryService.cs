@@ -1,4 +1,5 @@
-﻿using Common.Events;
+﻿
+using BiometricAuthentication.Common.Events;
 using System;
 
 namespace BiometricAuthentication.Business

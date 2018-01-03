@@ -1,7 +1,9 @@
-﻿using Common;
+﻿using BiometricAuthentication.Common;
+using BiometricAuthentication.Common.Events;
+using BiometricAuthentication.Common.Sensors;
 using System;
 
-namespace BiometricAuthentication.Business
+namespace BiometricAuthentication.Business.Devices
 {
     public class WearableDevice
     {
@@ -26,7 +28,7 @@ namespace BiometricAuthentication.Business
             deviceDiscoveryService.DiscoverDevices += DeviceDiscoveryService_DiscoverDevices;
         }
 
-        private void DeviceDiscoveryService_DiscoverDevices(Common.Events.PairingEventArgs pairingEventArgs)
+        private void DeviceDiscoveryService_DiscoverDevices(PairingEventArgs pairingEventArgs)
         {
             pairingEventArgs.WearableDeviceId = _deviceId;
             pairingEventArgs.WearableDeviceName = _deviceName;
