@@ -11,14 +11,14 @@ namespace BiometricAuthentication.Business.Devices
         private readonly DeviceDiscoveryService _deviceDiscoveryService;
 
         private readonly Guid _smartphoneId;
-        private readonly string _smartphoneName;
+        public string Name { get; }
 
         public string LastMessageReceived = string.Empty;
 
         public Smartphone(DeviceDiscoveryService deviceDiscoveryService)
         {
             _smartphoneId = Guid.NewGuid();
-            _smartphoneName = "Jonathan's Phone";
+            Name = "Jonathan's Phone";
 
             _wearableDeviceStore = new WearableDeviceStore();
             _deviceDiscoveryService = deviceDiscoveryService;
@@ -73,7 +73,7 @@ namespace BiometricAuthentication.Business.Devices
 
         public string DiscoverDevices()
         {
-            var pairingResult = _deviceDiscoveryService.PairWearableDevice(_smartphoneId, _smartphoneName);
+            var pairingResult = _deviceDiscoveryService.PairWearableDevice(_smartphoneId, Name);
 
             if (pairingResult != null)
             {

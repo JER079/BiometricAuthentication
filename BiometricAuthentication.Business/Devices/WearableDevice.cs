@@ -14,14 +14,14 @@ namespace BiometricAuthentication.Business.Devices
         private readonly Accelerometer _accelerometer;
         public readonly TransmitDataService DataTransmitter;
         private readonly Guid _deviceId;
-        private readonly string _deviceName;
+        public string Name { get; }
 
         public WearableDevice(Accelerometer accelerometer, 
                               DeviceDiscoveryService deviceDiscoveryService,
                               TransmitDataService transmitDataService)
         {
             _deviceId = Guid.NewGuid();
-            _deviceName = "Jonathan's Watch";
+            Name = "Jonathan's Watch";
 
             _accelerometer = accelerometer;
             DataTransmitter = transmitDataService;
@@ -31,7 +31,7 @@ namespace BiometricAuthentication.Business.Devices
         private void DeviceDiscoveryService_DiscoverDevices(PairingEventArgs pairingEventArgs)
         {
             pairingEventArgs.WearableDeviceId = _deviceId;
-            pairingEventArgs.WearableDeviceName = _deviceName;
+            pairingEventArgs.WearableDeviceName = Name;
         }
 
         public void StartNewSession()

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Devices\ManInTheMiddle.cs" />
     <Compile Include="Encryption\DecryptionService.cs" />
     <Compile Include="DeviceDircoveryService.cs" />
     <Compile Include="EncryptionKeyGenerator.cs" />

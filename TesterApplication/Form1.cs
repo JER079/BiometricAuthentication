@@ -9,6 +9,7 @@ namespace TesterApplication
     {
         private Smartphone _smartphone;
         private WearableDevice _wearableDevice;
+        private ManInTheMiddle _manInTheMiddle;
 
         public Form1()
         {
@@ -24,9 +25,13 @@ namespace TesterApplication
 
             _wearableDevice = new WearableDevice(new Accelerometer(), discoveryService, dataTransmitter);
             _smartphone = new Smartphone(discoveryService);
+            _manInTheMiddle = new ManInTheMiddle();
 
+            PhoneName.Text = _smartphone.Name;
+            WearableName.Text = _wearableDevice.Name;
+           
             _smartphone.SubscribeForEvents(_wearableDevice);
-
+            _manInTheMiddle.SubscribeForEvents(_wearableDevice);
         }
 
         private void StartNewSessionButton_Click(object sender, System.EventArgs e)
@@ -47,6 +52,7 @@ namespace TesterApplication
             _wearableDevice.TransmitData(TransmitTextBox.Text);
 
             SmartphoneMessage.Text = "Received " + _smartphone.LastMessageReceived;
+            SniffedMessage.Text = "Sniffed " + _manInTheMiddle.LastSniffedMessage;
         }
     }
 }
