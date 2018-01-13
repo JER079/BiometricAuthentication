@@ -21,7 +21,7 @@ namespace BiometricAuthentication.Business.Devices
                               TransmitDataService transmitDataService)
         {
             _deviceId = Guid.NewGuid();
-            Name = "Jonathan's Watch";
+            Name = "Jeremy's Watch";
 
             _accelerometer = accelerometer;
             DataTransmitter = transmitDataService;
