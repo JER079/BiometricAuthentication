@@ -9,3 +9,6 @@
 /Common/obj/Debug
 /TesterApplication/bin/Debug
 /TesterApplication/obj/Debug
+/BiometricAuthentication.Business/obj/Release
+/Common/obj/Release
+/TesterApplication/obj/Release

@@ -18,7 +18,7 @@ namespace BiometricAuthentication.Business.Devices
         public Smartphone(DeviceDiscoveryService deviceDiscoveryService)
         {
             _smartphoneId = Guid.NewGuid();
-            Name = "Jonathan's Phone";
+            Name = "Jeremy's Phone";
 
             _wearableDeviceStore = new WearableDeviceStore();
             _deviceDiscoveryService = deviceDiscoveryService;
