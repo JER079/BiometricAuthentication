@@ -54,6 +54,7 @@ namespace BiometricAuthentication.Business.Devices
         private void WearableDevice_RaiseStartNewSession(GaitReadings gaitReadings, SessionEventArgs sessionEventArgs)
         {
             var createSessionResult = StartNewSession(gaitReadings);
+
             sessionEventArgs.SessionId = createSessionResult.Session.SessionId;
             sessionEventArgs.EncryptionKey = createSessionResult.EncryptionKey;
         }
