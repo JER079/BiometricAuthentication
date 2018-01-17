@@ -72,10 +72,14 @@ namespace BiometricAuthentication.Business.Devices
             else return null;
         }
 
+        //smartphone sends a broadcast message requesting for any new devices for pairing
+        //smartphone has a database a.k.a. DeviceDiscoveryService, which holds info of phone's name & ID as well info of the pairable device, i.e. watch name & ID
         public string DiscoverDevices()
         {
+            // variable consists of both pairable devices info received from the DeviceDiscoveryService, i.e. watch and phone
             var pairingResult = _deviceDiscoveryService.PairWearableDevice(_smartphoneId, Name);
 
+            //if no reply from any other device, pairing is terminated
             if (pairingResult != null)
             {
                 _wearableDeviceStore.AddDevice(pairingResult.WearableDeviceId, pairingResult.WearableDeviceName);

@@ -4,6 +4,7 @@ namespace BiometricAuthentication.Common
 {
     public class Accelerometer
     {
+        //length of 50 numbers
         private const int ReadingsLength = 50;
 
         public AccelerometerReadings GetLatestReadings()

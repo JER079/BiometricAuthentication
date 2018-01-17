@@ -28,8 +28,12 @@ namespace BiometricAuthentication.Business
             _pairingEventArgs.SmartphoneId = smartphoneId;
             _pairingEventArgs.SmartphoneName = smartphoneName;
 
+            // DiscoverDevices holds smarthphone name & ID
             DiscoverDevices(_pairingEventArgs);
 
+            //discovery of smartwatch
+            //includes watch ID and watch name
+            //returns data of both devices ID & Names paired together
             return 
                 new WearableDevicePairingResult(_pairingEventArgs.WearableDeviceId, _pairingEventArgs.WearableDeviceName);
         }
