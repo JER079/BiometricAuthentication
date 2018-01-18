@@ -73,7 +73,7 @@ namespace BiometricAuthentication.Business.Devices
         }
 
         //smartphone sends a broadcast message requesting for any new devices for pairing
-        //smartphone has a database a.k.a. DeviceDiscoveryService, which holds info of phone's name & ID as well info of the pairable device, i.e. watch name & ID
+        //DeviceDiscoveryService is a class for pairing, which holds info of phone's name & ID as well info of the pairable device, i.e. watch name & ID
         public string DiscoverDevices()
         {
             // variable consists of both pairable devices info received from the DeviceDiscoveryService, i.e. watch and phone
