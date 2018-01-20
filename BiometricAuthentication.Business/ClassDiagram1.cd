@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BiometricAuthentication.Business.WearableDevicePairingResult" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>DeviceDircoveryService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.DeviceDiscoveryService" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
+      <FileName>DeviceDircoveryService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.EncryptionKeyGenerator" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAQAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>EncryptionKeyGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.TransmitDataService" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAACAAAAgAAAAAAAAIAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>TransmitDataService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.WearableDeviceEntry" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgIAAAAAAAAAAAAgAAAAQAQAgEAgIAAAAAAA=</HashCode>
+      <FileName>WearableDeviceEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.SessionResult" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WearableDeviceEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.WearableDeviceStore" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAIAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WearableDeviceStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.Devices.ManInTheMiddle" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAABAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Devices\ManInTheMiddle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.Devices.Smartphone" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIAABAIAAQAAAAACAAAAQABAAAAEAAACAAAAAAAAA=</HashCode>
+      <FileName>Devices\Smartphone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.Devices.WearableDevice" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAEgAAAAAAkAAAQAAgAAAAAAACAAAAAAEAA=</HashCode>
+      <FileName>Devices\WearableDevice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.Encryption.DecryptionService" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Encryption\DecryptionService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.Encryption.EncryptionService" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Encryption\EncryptionService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Common.Events.CommunicationEventArgs" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BiometricAuthentication.Common.Events.PairingEventArgs" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BiometricAuthentication.Common.Events.SessionEventArgs" Collapsed="true">
+    <Position X="0.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BiometricAuthentication.Common.Accelerometer" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BiometricAuthentication.Common.Sensors.AccelerometerReadings" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BiometricAuthentication.Common.Sensors.GaitReadings" Collapsed="true">
+    <Position X="0.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BiometricAuthentication.Business.Session" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

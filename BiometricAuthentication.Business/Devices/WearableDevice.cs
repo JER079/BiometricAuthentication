@@ -42,11 +42,13 @@ namespace BiometricAuthentication.Business.Devices
             
             RaiseStartNewSession(gaitReadings, sessionEventArgs);
 
+            //this step is after validating the new session
             DataTransmitter.SetEncryptionKey(sessionEventArgs.EncryptionKey);
         }
 
         public void TransmitData(string dataToTransmit)
         {
+            //to transmit data from the text box
             DataTransmitter.SendData(dataToTransmit, new GaitReadings(GetLatestReadings()), _deviceId);
         }
 

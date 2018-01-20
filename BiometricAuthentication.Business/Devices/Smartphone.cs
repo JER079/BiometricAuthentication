@@ -63,8 +63,10 @@ namespace BiometricAuthentication.Business.Devices
         {
             var deviceEntry = _wearableDeviceStore.Find(gaitReadings);
 
+            //in this stage the phone suppose to recognise the watch
             if (deviceEntry != null)
             {
+                //validating a new session
                 return deviceEntry.CreateNewSessionForDevice(gaitReadings);
             }
 

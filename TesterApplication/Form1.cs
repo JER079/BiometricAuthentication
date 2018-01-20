@@ -45,7 +45,7 @@ namespace TesterApplication
         private void PairButton_Click(object sender, System.EventArgs e)
         {
             //Discover Button (on form)
-            //return
+            //returns info regards the phone and also the new pairable device
             var pairedDeviceName = _smartphone.DiscoverDevices();
 
             //once pairing is succesfull
@@ -54,7 +54,7 @@ namespace TesterApplication
 
         private void TransmitDataButton_Click(object sender, System.EventArgs e)
         {
-            //new Gait Readings & Device ID
+            //watch name, ID, SessionArgs (encryptionkey, sessionId and wearable device ID)
             _wearableDevice.TransmitData(TransmitTextBox.Text);
 
             SmartphoneMessage.Text = "Received " + _smartphone.LastMessageReceived;
