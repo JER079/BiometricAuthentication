@@ -53,6 +53,7 @@ namespace BiometricAuthentication.Business.Devices
 
         private void WearableDevice_RaiseStartNewSession(GaitReadings gaitReadings, SessionEventArgs sessionEventArgs)
         {
+            //in this step the phone checks the wearableDeviceStore readings and compares
             var createSessionResult = StartNewSession(gaitReadings);
 
             sessionEventArgs.SessionId = createSessionResult.Session.SessionId;

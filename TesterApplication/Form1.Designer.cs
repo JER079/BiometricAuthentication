@@ -44,7 +44,7 @@
             // StartNewSessionButton
             // 
             this.StartNewSessionButton.Location = new System.Drawing.Point(531, 87);
-            this.StartNewSessionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StartNewSessionButton.Margin = new System.Windows.Forms.Padding(4);
             this.StartNewSessionButton.Name = "StartNewSessionButton";
             this.StartNewSessionButton.Size = new System.Drawing.Size(164, 28);
             this.StartNewSessionButton.TabIndex = 0;
@@ -55,7 +55,7 @@
             // PairButton
             // 
             this.PairButton.Location = new System.Drawing.Point(75, 103);
-            this.PairButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PairButton.Margin = new System.Windows.Forms.Padding(4);
             this.PairButton.Name = "PairButton";
             this.PairButton.Size = new System.Drawing.Size(100, 28);
             this.PairButton.TabIndex = 1;
@@ -110,7 +110,7 @@
             // TransmitTextBox
             // 
             this.TransmitTextBox.Location = new System.Drawing.Point(531, 186);
-            this.TransmitTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TransmitTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.TransmitTextBox.Name = "TransmitTextBox";
             this.TransmitTextBox.Size = new System.Drawing.Size(132, 22);
             this.TransmitTextBox.TabIndex = 6;
@@ -119,7 +119,7 @@
             // TransmitDataButton
             // 
             this.TransmitDataButton.Location = new System.Drawing.Point(549, 218);
-            this.TransmitDataButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TransmitDataButton.Margin = new System.Windows.Forms.Padding(4);
             this.TransmitDataButton.Name = "TransmitDataButton";
             this.TransmitDataButton.Size = new System.Drawing.Size(100, 28);
             this.TransmitDataButton.TabIndex = 7;
@@ -137,6 +137,7 @@
             this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "MITM";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -176,7 +177,7 @@
             this.Controls.Add(this.PhoneName);
             this.Controls.Add(this.PairButton);
             this.Controls.Add(this.StartNewSessionButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

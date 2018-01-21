@@ -85,5 +85,10 @@ namespace TesterApplication
         {
 
         }
+
+        private void label1_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
