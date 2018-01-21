@@ -34,15 +34,17 @@ namespace BiometricAuthentication.Business.Devices
             pairingEventArgs.WearableDeviceName = Name;
         }
 
+        //in this section to initiate a new session the watch will return its gaitreadings, sessionEventArgs and deviceID
         public void StartNewSession()
         {
             var gaitReadings = new GaitReadings(GetLatestReadings());
             sessionEventArgs = new SessionEventArgs();
             sessionEventArgs.WearbleDeviceId = _deviceId;
             
+            //sessionEventsArgs returned from phone
             RaiseStartNewSession(gaitReadings, sessionEventArgs);
 
-            //this step is after validating the new session
+            //sessionEventArgs consists of the EncryptionKey to be used, WatchID and Phone Session ID
             DataTransmitter.SetEncryptionKey(sessionEventArgs.EncryptionKey);
         }
 
