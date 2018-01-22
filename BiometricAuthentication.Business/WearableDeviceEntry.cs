@@ -32,6 +32,7 @@ namespace BiometricAuthentication.Business
         {
             if (_session != null && !_session.IsExpired) return new SessionResult(_session, _encryptionKey);
 
+            // -session is where the session time frame is configured
             _session = new Session();
             _gaitReadings = gaitReadings;
 

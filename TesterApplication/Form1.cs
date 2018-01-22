@@ -45,7 +45,8 @@ namespace TesterApplication
         private void PairButton_Click(object sender, System.EventArgs e)
         {
             //Discover Button (on form)
-            //returns info regards the phone and also the new pairable device
+            //_smartphone refers data of phone Name & ID
+            //.DiscoverDevices refersr watch data, Name & ID
             var pairedDeviceName = _smartphone.DiscoverDevices();
 
             //once pairing is succesfull

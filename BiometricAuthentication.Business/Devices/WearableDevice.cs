@@ -28,6 +28,7 @@ namespace BiometricAuthentication.Business.Devices
             deviceDiscoveryService.DiscoverDevices += DeviceDiscoveryService_DiscoverDevices;
         }
 
+        //data of Device Name & ID
         private void DeviceDiscoveryService_DiscoverDevices(PairingEventArgs pairingEventArgs)
         {
             pairingEventArgs.WearableDeviceId = _deviceId;
@@ -38,13 +39,15 @@ namespace BiometricAuthentication.Business.Devices
         public void StartNewSession()
         {
             var gaitReadings = new GaitReadings(GetLatestReadings());
+            //new SessionEventArgs to be delivered from phone
             sessionEventArgs = new SessionEventArgs();
             sessionEventArgs.WearbleDeviceId = _deviceId;
             
-            //sessionEventsArgs returned from phone
+            //watch makes request for new session
+            //sessionEventsArgs returned from phone, consist of EncryptionKey, Session Time & ID
             RaiseStartNewSession(gaitReadings, sessionEventArgs);
 
-            //sessionEventArgs consists of the EncryptionKey to be used, WatchID and Phone Session ID
+            //data transfered with encryptionkey, sessionID & watch ID
             DataTransmitter.SetEncryptionKey(sessionEventArgs.EncryptionKey);
         }
 
