@@ -1,0 +1,6 @@
+C:\Users\jdime\Source\Repos\BiometricAuthentication\Common\bin\Debug\BiometricAuthentication.Common.dll
+C:\Users\jdime\Source\Repos\BiometricAuthentication\Common\bin\Debug\BiometricAuthentication.Common.pdb
+C:\Users\jdime\Source\Repos\BiometricAuthentication\Common\obj\Debug\BiometricAuthentication.Common.csproj.CoreCompileInputs.cache
+C:\Users\jdime\Source\Repos\BiometricAuthentication\Common\obj\Debug\BiometricAuthentication.Common.dll
+C:\Users\jdime\Source\Repos\BiometricAuthentication\Common\obj\Debug\BiometricAuthentication.Common.pdb
+C:\Users\jdime\Source\Repos\BiometricAuthentication\Common\obj\Debug\BiometricAuthentication.Common.csprojResolveAssemblyReference.cache

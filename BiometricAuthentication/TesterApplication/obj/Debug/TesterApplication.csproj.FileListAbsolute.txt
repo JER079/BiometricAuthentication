@@ -1,0 +1,14 @@
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\bin\Debug\TesterApplication.exe.config
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\bin\Debug\TesterApplication.exe
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\bin\Debug\TesterApplication.pdb
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\bin\Debug\BiometricAuthentication.Business.dll
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\bin\Debug\BiometricAuthentication.Common.dll
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\bin\Debug\BiometricAuthentication.Business.pdb
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\bin\Debug\BiometricAuthentication.Common.pdb
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\obj\Debug\TesterApplication.csprojResolveAssemblyReference.cache
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\obj\Debug\TesterApplication.Form1.resources
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\obj\Debug\TesterApplication.Properties.Resources.resources
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\obj\Debug\TesterApplication.csproj.GenerateResource.Cache
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\obj\Debug\TesterApplication.csproj.CoreCompileInputs.cache
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\obj\Debug\TesterApplication.exe
+C:\Users\jdime\Source\Repos\BiometricAuthentication\TesterApplication\obj\Debug\TesterApplication.pdb

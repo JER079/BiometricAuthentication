@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BiometricAuthentication.Business.Devices.Smartphone">
+    <Position X="8" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIAARAIAAQAAAIACAAAAQCBAAAAEAAACAAAAAAAAA=</HashCode>
+      <FileName>Devices\Smartphone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BiometricAuthentication.Business.Devices.WearableDevice">
+    <Position X="0.5" Y="0.5" Width="3.5" />
+    <NestedTypes>
+      <Delegate Name="BiometricAuthentication.Business.Devices.WearableDevice.SessionHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Devices\WearableDevice.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAEgAQAAAAkAAAYAAgAAAAAAACAAQAAAEAA=</HashCode>
+      <FileName>Devices\WearableDevice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
